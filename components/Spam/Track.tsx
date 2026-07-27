@@ -28,7 +28,7 @@ const Track = () => {
       </div >
 
       <div className=" sm:col-start-2 sm:col-end-4 sm:row-start-7 sm:row-end-8 p-1">
-        <Link href={href} className="font-bold text-lg font-glancyr leading-6 text-white dark:text-dark-4">Fox on the Run</Link>
+        <Link href={href} className="font-bold text-lg font-glancyr leading-6 text-white dark:text-dark-4">Beat it</Link>
         <div className="flex justify-between text-xs text-zinc-500 pointer-events-none">
           <p>By: Michael Jackson</p>
           <p className="font-mono">1982</p>

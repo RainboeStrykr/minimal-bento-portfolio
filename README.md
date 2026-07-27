@@ -4,10 +4,7 @@ A minimal, pixel-perfect personal portfolio website for **Deehan Paul** showcasi
 
 Live site — configured for deployment to Vercel with Next.js 16 (Turbopack).
 
-<!-- Add your screenshots here when ready:
-[![screenshot-dark](https://your-assets-url/screenshot-desktop-dark.webp#gh-dark-mode-only)](https://deehan.vercel.app/#gh-dark-mode-only)
-[![screenshot-light](https://your-assets-url/screenshot-desktop-light.webp#gh-light-mode-only)](https://deehan.vercel.app/#gh-light-mode-only)
--->
+![walkthrough](/walkthrough.mp4)
 
 ## Overview
 
