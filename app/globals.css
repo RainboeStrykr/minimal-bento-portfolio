@@ -120,75 +120,23 @@ body {
   background: #43434b; /* Color of the scrollbar thumb on hover */
 }
 
-::view-transition-group(root) {
-  animation-timing-function: var(--expo-in);
+/* Smooth, simple light/dark mode transition — no view-transition masking */
+html,
+body,
+body > * {
+  transition:
+    background-color 300ms ease,
+    color 300ms ease,
+    border-color 300ms ease,
+    fill 300ms ease,
+    stroke 300ms ease;
 }
 
-::view-transition-new(root) {
-  mask: url('/assets/theL.gif') center / cover no-repeat;
-  animation: scale 1.5s;
-}
-
-::view-transition-old(root),
-.dark::view-transition-old(root) {
-  animation: scale 1.5s;
-
-}
-
-@keyframes scale {
-  0% {
-    mask-size: 0;
-  }
-  10% {
-    mask-size: 40vmax;
-  }
-  90% {
-    mask-size: 40vmax;
-  }
-  100% {
-    mask-size: 2000vmax;
-  }
-}
-
-@media (max-width: 1440px) {
-  @keyframes scale {
-    10% {
-      mask-size: 55vmax; /* Larger size for smaller screens */
-    }
-    90% {
-      mask-size: 55vmax;
-    }
-    100% {
-      mask-size: 2000vmax;
-    }
-  }
-}
-
-
-@media (max-width: 1200px) {
-  @keyframes scale {
-    10% {
-      mask-size: 65vmax; /* Larger size for smaller screens */
-    }
-    90% {
-      mask-size: 65vmax;
-    }
-    100% {
-      mask-size: 2000vmax;
-    }
-  }
-}
-
-@media (max-width: 1024px) {
-  @keyframes scale {
-    10% {
-      mask-size: 75vmax; /* Larger size for smaller screens */
-    }
-    90% {
-      mask-size: 75vmax;
-    }
-    100% {
-      mask-size: 2000vmax;
-    }
+/* Instant transitions for reduced-motion users */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body,
+  body > * {
+    transition: none !important;
   }
 }

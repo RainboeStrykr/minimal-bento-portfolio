@@ -5,42 +5,40 @@ import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
 export default function ThemeToggler() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
-  const switchTheme = () => {
-    switch (theme) {
-      case "light":
-        setTheme("dark");
-        break;
-      case "dark":
-        setTheme("light");
-        break;
-      default:
-        break;
-    }
-  };
+  const isDark = (theme === "system" ? resolvedTheme : theme) === "dark";
 
   const toggleTheme = () => {
-    //@ts-expect-error: Shut Up!
-    if (!document.startViewTransition) switchTheme();
-
-    //@ts-expect-error: Shut Up!
-    document.startViewTransition(switchTheme);
+    setTheme(isDark ? "light" : "dark");
   };
 
   return (
     <Button
       onClick={toggleTheme}
       size="icon"
-      className="rounded-full !border-none bg-transparent "
+      className="rounded-full !border-none bg-transparent relative overflow-hidden"
     >
-      <p className=" w-[1.2rem] scale-100 transition-all duration-100 dark:scale-0 text-white dark:text-zinc-500 font-bold hover:[box-shadow:1px_1px_50px_-1px_#fff] bg-none rounded-full">
-        <SunIcon className="w-full h-full" />
-      </p>
-
-      <p className="absolute w-[1.2rem] scale-0 transition-all duration-100 dark:scale-100 text-zinc-500 dark:text-black font-bold hover:[box-shadow:1px_1px_50px_20px_#c6c6c650] bg-none rounded-full ">
-        <MoonIcon className="w-full h-full" />
-      </p>
+      <div className="relative w-[1.2rem] h-[1.2rem]">
+        <SunIcon
+          className={
+            "absolute inset-0 w-full h-full transition-all duration-300 ease-out " +
+            (isDark
+              ? "scale-0 -rotate-90 opacity-0 text-white"
+              : "scale-100 rotate-0 opacity-100 text-white")
+          }
+          aria-hidden={isDark}
+        />
+        <MoonIcon
+          className={
+            "absolute inset-0 w-full h-full transition-all duration-300 ease-out " +
+            (isDark
+              ? "scale-100 rotate-0 opacity-100 text-black"
+              : "scale-0 rotate-90 opacity-0 text-black")
+          }
+          aria-hidden={!isDark}
+        />
+      </div>
     </Button>
   );
 }
