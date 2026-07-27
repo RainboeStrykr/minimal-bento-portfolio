@@ -2,7 +2,7 @@
 
 A minimal, pixel-perfect personal portfolio website for **Deehan Paul** showcasing work as a full-stack developer.
 
-![screenshot](/website/screenshot.png)
+![walkthrough](public/website/walkthrough.mp4)
 
 ## Overview
 
