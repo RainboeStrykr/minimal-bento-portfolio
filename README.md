@@ -4,7 +4,20 @@ A minimal, pixel-perfect personal portfolio website for **Deehan Paul** showcasi
 
 Live site — configured for deployment to Vercel with Next.js 16 (Turbopack).
 
-![walkthrough](/walkthrough.mp4)
+<!-- Walkthrough video -->
+<!--
+  NOTE: On GitHub, `<video>` with a relative path works when the file is committed
+  to the repo. If this still doesn't play, replace the `src` below with the raw
+  GitHub URL, e.g.:
+    https://github.com/<USER>/<REPO>/blob/main/public/assets/walkthrough.mp4?raw=true
+-->
+<div align="center">
+  <video src="public/assets/walkthrough.mp4" width="800" controls loop muted playsinline>
+    Your browser does not support embedded video.
+    <a href="public/assets/walkthrough.mp4">Download walkthrough.mp4</a>
+  </video>
+  <p><em>Site walkthrough (click the play button above ▶)</em></p>
+</div>
 
 ## Overview
 
