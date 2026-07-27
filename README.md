@@ -1,4 +1,4 @@
-# Deehan Paul — Portfolio &middot;
+# Minimal Bento Portfolio
 
 A minimal, pixel-perfect personal portfolio website for **Deehan Paul** showcasing work as a full-stack developer.
 
@@ -11,8 +11,6 @@ Apple-style projects carousel, light/dark themes, Framer Motion animations, and
 rich SEO metadata.
 
 **About Deehan Paul:** 20 year-old developer based in Bhubaneshwar, India.
-Building modern, animated web experiences with Next.js, TypeScript, and
-Framer Motion.
 
 ### Tech Stack
 
@@ -33,7 +31,7 @@ Framer Motion.
 - Dedicated `/projects` route with an Apple-style cards carousel (clickable projects + GitHub links)
 - Light / Dark theme with persisted preference (localStorage)
 - Framer Motion entrance and hover animations throughout
-- SEO & metadata configured for Deehan Paul (OpenGraph, Twitter/X cards, canonical URLs, robots directives)
+- SEO & metadata configured for Deehan Paul 
 - PWA-ready (web manifest + complete favicon set under `public/favicon/`)
 - Privacy-friendly Vercel Analytics
 - Clickable resume card linking to `/resume.pdf`
